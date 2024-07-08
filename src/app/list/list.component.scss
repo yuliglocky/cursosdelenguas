@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .profesores,
+  .cursos {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%; /* Distribuir el espacio igualmente */
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 10px; /* Agregar espacio interno */
+  }
+  
+  li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  
+  /* Estilo alternativo para filas */
+  li:nth-child(even) {
+    background-color: #000000;
+  }
+  
+  /* Hover effect */
+  li:hover {
+    background-color: #2f2a2a;
+    cursor: pointer;
+  }
+
+  
+  .crear-clase {
+    background-color: #111010;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+ 
+  
+  .custom-button {
+    --background: #CCD0DF;
+    --background-hover: #CCD0DF;
+    --background-activated: #CCD0DF;
+    --background-focused: #CCD0DF;
+    --color: rgb(0, 0, 0);
+    --border-radius: 20px;
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+    --ripple-color: deeppink;
+    --padding-top: 2px;
+    --padding-bottom: 2px;
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --height: 30px;
+    --width: auto;
+  }
+  
+  .custom-button.active {
+    --background: #9da2b8; /* Cambio de color cuando está activo */
+  }
+
+  .custom-buttonuwu {
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 12px 24px; /* Padding interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+
+  
+  .custom-buttonuwu:hover {
+    background-color: #45a049; /* Cambio de color de fondo al pasar el cursor */
+  }

@@ -1,0 +1,52 @@
+
+
+<ion-content [fullscreen]="true">
+  <app-admin-nav></app-admin-nav>
+  <!-- Lista de cursos por profesor en tarjetas -->
+  <div class="card-container">
+    <div class="card curso-card" *ngFor="let cursoXProfesor of cursosXProfesores">
+      <div class="card-body">
+        <h5 class="card-title">{{ cursoXProfesor.cursoNombre }}</h5>
+        <p class="card-text">
+          <strong>Profesor:</strong> {{ cursoXProfesor.profesorNombre }} <br>
+          <strong>Día:</strong> {{ cursoXProfesor.dia }} <br>
+          <strong>Hora:</strong> {{ cursoXProfesor.hora }} <br>
+          <strong>Nivel:</strong> {{ cursoXProfesor.nivel }}
+        </p>
+        <div class="button-container">
+          <button class="btn btn-danger" (click)="eliminarCursoXProfesor(cursoXProfesor.id)">Eliminar</button>
+          <button class="btn btn-primary" (click)="editarCursoXProfesor(cursoXProfesor)">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div *ngIf="cursoXProfesorSeleccionado">
+  <!-- Formulario para editar en una tarjeta -->
+  <div class="card curso-card">
+    <div class="card-body">
+      <h5 class="card-title">Editar Curso por Profesor</h5>
+      <div class="form-group">
+        <label>Nombre del curso:</label>
+        <input type="text" class="form-control" [(ngModel)]="cursoXProfesorSeleccionado.cursoNombre" name="cursoNombre" />
+      </div>
+      <div class="form-group">
+        <label>Nombre del profesor:</label>
+        <input type="text" class="form-control" [(ngModel)]="cursoXProfesorSeleccionado.profesorNombre" name="profesorNombre" />
+        <div class="form-group">
+          <label>Cambia hora:</label>
+          <input type="text" class="form-control" [(ngModel)]="cursoXProfesorSeleccionado.hora" name="hora" />
+        </div>
+        <div class="form-group">
+          <label>Cambia de dia:</label>
+          <input type="text" class="form-control" [(ngModel)]="cursoXProfesorSeleccionado.dia" name="dia" />
+        </div>
+      </div>
+      <div class="button-container">
+        <button class="btn btn-success" (click)="actualizarCredencialesCursoXProfesor()">Actualizar Credenciales</button>
+        <button class="btn btn-secondary" (click)="cancelarActualizacion()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>
+</ion-content>

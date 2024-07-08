@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Profesores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-admin-nav></app-admin-nav>
+ 
+  <div class="container">
+    <!-- Lista de profesores -->
+    <div class="profesores-list">
+      <h2>Lista de Profesores</h2>
+      <ul>
+        <li *ngFor="let profesor of profesores" class="card">
+          <span>{{ profesor.nombre }} - {{ profesor.apellido }} - ({{ profesor.correo }}) - ({{ profesor.telefono }}) - ({{ profesor.especialidades }}) </span>
+          <button class="button eliminar" (click)="eliminarProfesor(profesor.id)">Eliminar</button>
+          <button class="button editar" (click)="editarProfesor(profesor)">Editar</button>
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Formulario para actualizar credenciales de un profesor -->
+    <div *ngIf="profesorSeleccionado" class="form-container">
+      <div class="form-header">
+        <h2>Actualizar Credenciales de Profesor</h2>
+        <button class="button close" (click)="cancelarActualizacion()">x</button>
+      </div>
+      <form (ngSubmit)="actualizarCredencialesProfesor()">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input id="nombre" [(ngModel)]="profesorSeleccionado.nombre" name="nombre" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" [(ngModel)]="profesorSeleccionado.correo" name="telefono" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Telefono:</label>
+          <input id="email" [(ngModel)]="profesorSeleccionado.telefono" name="email" required />
+        </div>
+        <!-- Otros campos para actualizar las credenciales -->
+        <button type="submit" class="button actualizar">Actualizar Credenciales</button>
+      </form>
+    </div>
+  </div>
+</ion-content>

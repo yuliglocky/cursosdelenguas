@@ -1,0 +1,70 @@
+ion-button {
+    margin-top: 10px; /* Ajusta este valor según sea necesario */
+    --background: #ffffff;
+    --background-hover: #ffffff;
+    --background-activated: #ffffff;
+    --background-focused: #ffffff;
+    --color: blue;
+    --border-radius: 0;
+    --border-color: #ffffff;
+    --border-style: solid;
+    --border-width: 1px;
+    --box-shadow: 0 2px 6px 0 rgb(255, 255, 255);
+    --ripple-color: deeppink;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+
+  
+  .add-to-cart-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Estilo para la imagen del producto */
+  .product-image {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+    margin-right: 10px;
+  }
+
+
+  .product-scroll {
+    max-height: 80vh; /* Altura máxima para permitir el desplazamiento */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+  }
+  
+  .product-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-item {
+    margin-bottom: 20px; /* Espacio entre cada producto */
+  }
+  .button-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye los botones horizontalmente */
+  }
+  
+  .custom-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .custom-button img {
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+  }
+  
+  .custom-button span {
+    margin-top: 5px; /* Espacio entre la imagen y el texto */
+    color: #333; /* Cambia el color del texto a tu preferencia */
+  }
+
+  

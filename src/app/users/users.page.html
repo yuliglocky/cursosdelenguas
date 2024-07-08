@@ -1,0 +1,21 @@
+
+<ion-content [fullscreen]="true">
+  <app-solicitud></app-solicitud>
+  <h3> Inscribete en nuestros cursos</h3>
+ <div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-12" *ngFor="let curso of cursos">
+    <div class="card mb-4">
+      <!-- Aquí incluimos la imagen desde Pinterest -->
+      <img src="https://i.pinimg.com/564x/b4/a0/39/b4a0395737596eea8a92800906052c90.jpg" class="card-img-top" alt="Imagen del curso">
+      <div class="card-body">
+        <h5 class="card-title">{{ curso.cursoNombre }}</h5>
+        <p class="card-text"><strong>Profesor:</strong> {{ curso.profesorNombre }}</p>
+        <p class="card-text"><strong>Día:</strong> {{ curso.dia }}</p>
+        <p class="card-text"><strong>Hora:</strong> {{ curso.hora }}</p>
+        <p class="card-text"><strong>Nivel:</strong> {{ curso.nivel }}</p>
+        <app-studentss [curso]="curso"></app-studentss>
+      </div>
+    </div>
+  </div>
+</div>
+</ion-content>

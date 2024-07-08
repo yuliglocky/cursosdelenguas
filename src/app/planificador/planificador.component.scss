@@ -1,0 +1,76 @@
+.horario-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr); /* 1 columna para las horas + 7 para los días */
+    grid-gap: 10px;
+  }
+  
+  .encabezado {
+    display: contents; /* Para que los hijos se comporten como parte de la cuadrícula del contenedor */
+  }
+  
+  .placeholder {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .dias-semana {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column: 2 / span 7;
+    grid-row: 1;
+  }
+  
+  .dia {
+    text-align: center;
+    background-color: #181717;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .horas-container {
+    display: contents;
+  }
+  
+  .hora {
+    grid-column: 1;
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: auto;
+  }
+  
+  .hora h3 {
+    grid-column: 1;
+    text-align: center;
+    background-color: #0a0a0a;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .dias-container {
+    grid-column: 2 / span 7;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+  
+  .cursos {
+    background-color: #121010;
+    border: 1px solid #ddd;
+    min-height: 100px; /* Define una altura mínima para las celdas de cursos */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    padding: 55px; /* Ajusta el tamaño de la celda */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  }
+  
+  .curso {
+    background-color: #070707;
+    border: 1px solid #ccc;
+    margin: 0; /* Elimina el margen */
+    flex-grow: 1; /* Permite que el curso ocupe todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    width: 50%; /* Asegura que el contenido ocupe todo el ancho de la celda */
+    height: 70%; /* Asegura que el contenido ocupe todo el alto de la celda */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  }

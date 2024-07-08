@@ -1,0 +1,69 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .profesores-list {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #070707;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .eliminar {
+    background: #ff4d4d;
+    color: white;
+    margin-left: 40px;
+  }
+  
+  .editar {
+    background: #4caf50;
+    color: white;
+    margin-left: 40px;
+  }
+  
+  .form-container {
+    flex: 1;
+    background: #000000;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .button.close {
+    background: #ff4d4d;
+    color: white;
+  }
+  
+  .button.actualizar {
+    background: #4caf50;
+    color: white;
+  }

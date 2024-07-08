@@ -1,0 +1,55 @@
+
+<div>
+  <h3>Lista de Profesores:</h3>
+  <ul>
+    <li *ngFor="let prof of profesor">
+      {{ prof.nombre }} {{ prof.apellido }} - Especialidades: {{ prof.especialidades }}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <h3>Lista de Cursos:</h3>
+  <ul>
+    <li *ngFor="let curso of cursos">
+      {{ curso.nombre }} - Nivel: {{ curso.nivel }} - Idioma: {{ curso.idioma }} - Hora: {{ curso.hora }}
+    </li>
+  </ul>
+</div>
+
+<br>
+
+<div>
+  <h3>Crear una clase:</h3>
+  <div>
+    <label for="profesor">Selecciona un Profesor:</label>
+    <select id="profesor" [(ngModel)]="profesorSeleccionado" name="profesor">
+      <option *ngFor="let prof of profesor" [ngValue]="prof">{{ prof.nombre }} {{ prof.apellido }} - Especialidades: {{ prof.especialidades }}</option>
+    </select>
+  </div>
+<br>
+  <div>
+    <label for="curso">Selecciona un Curso:</label>
+    <select id="curso" [(ngModel)]="cursoSeleccionado" name="curso">
+      <option *ngFor="let curso of cursos" [ngValue]="curso">{{ curso.nombre }} - Nivel: {{ curso.nivel }} - Idioma: {{ curso.idioma }}</option>
+    </select>
+  </div>
+
+  <br>
+  <div>
+    <label for="dia">Selecciona un Día:</label>
+    <select id="dia" [(ngModel)]="diaSeleccionado" name="dia">
+      <option *ngFor="let dia of Dias" [value]="dia">{{ dia }}</option>
+    </select>
+  </div>
+  <br>
+  <button (click)="crearCursoXProfesor()" class="custom-buttonuwu">Crear una clase</button>
+  <br>
+  <br>
+    <br>
+  <ion-button (click)="changeBoxShadow()" expand="block" class="custom-button" [class.active]="isBoxShadowActive">Profesor uwu </ion-button>
+  <ion-button (click)="changeBoxShadow1()" expand="block" class="custom-button" [class.active]="isBoxShadowActive">Cursos uwu </ion-button>
+  <ion-button (click)="changeBoxShadow2()" expand="block" class="custom-button" [class.active]="isBoxShadowActive">Estudiantes uwu </ion-button>
+</div>
+
+

@@ -1,0 +1,62 @@
+/* Estilos personalizados para las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    margin-bottom: 8px;
+    color: #555;
+  }
+
+  .btn {
+    font-size: 0.75rem; /* Tamaño del texto del botón */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    padding: 4px 8px; /* Espaciado interno */
+  }
+  
+  .btn-success {
+    background-color: #28a745; /* Color de fondo verde para botón de éxito */
+    border-color: #28a745; /* Color del borde */
+    color: #fff; /* Color del texto */
+  }
+  
+  .btn-success:hover {
+    background-color: #218838; /* Color de fondo más oscuro al pasar el cursor */
+    border-color: #1e7e34; /* Color del borde */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Color de fondo rojo para botón de peligro */
+    border-color: #dc3545; /* Color del borde */
+    color: #fff; /* Color del texto */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Color de fondo más oscuro al pasar el cursor */
+    border-color: #bd2130; /* Color del borde */
+  }

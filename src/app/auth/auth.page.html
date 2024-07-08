@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>auth</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">auth</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="card-container">
+    <!-- Tarjeta de Inicio de Sesión -->
+    <ion-card [style.background-color]="cardColor" class="rounded-card">
+      <ion-card-content>
+        <div class="logo-container">
+          <h1 class="login-title">Login</h1>
+        </div>
+        <form (submit)="login()">
+          <ion-item>
+            <ion-label position="stacked">
+              <img src="https://c0.klipartz.com/pngpicture/178/595/gratis-png-perfil-de-usuario-iconos-de-computadora-inicio-de-sesion-avatares-de-usuario-thumbnail.png" alt="Email Icon" class="icon">
+              Email
+            </ion-label>
+            <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">
+              <img src="https://w7.pngwing.com/pngs/975/821/png-transparent-password-manager-computer-icons-password-strength-password-safe-chang-miscellaneous-password-strength-password-safe-thumbnail.png" alt="Password Icon" class="icon">
+              Password
+            </ion-label>
+            <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
+          </ion-item>
+          <ion-button expand="block" type="submit">Login</ion-button>
+          <ion-button expand="block" class="extra-button" [routerLink]="['/login']">
+            Register
+          </ion-button>
+        </form>
+        <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      </ion-card-content>
+    </ion-card>
+    </div>
+</ion-content>

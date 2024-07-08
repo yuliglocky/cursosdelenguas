@@ -1,0 +1,39 @@
+<div class="container">
+  <h2>Crear Curso</h2>
+  <form (ngSubmit)="crearCurso()">
+    <label for="nombre">Nombre del curso:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="curso.nombre" required>
+    <br>
+
+    <label for="idioma">Idioma:</label>
+    <input type="text" id="idioma" name="idioma" [(ngModel)]="curso.idioma" required>
+    <br>
+
+   
+    <label for="nivel">Nivel:</label>
+    <select id="hora" name="hora" [(ngModel)]="curso.nivel" required>
+      <option *ngFor="let nivel of niveles" [value]="nivel">{{ nivel}}</option>
+    </select>
+    <br>
+
+
+    <div>
+      <label for="hora">Hora:</label>
+      <select id="hora" name="hora" [(ngModel)]="curso.hora" required>
+        <option *ngFor="let hora of horasOptions" [value]="hora">{{ hora }}</option>
+      </select>
+    </div>
+
+    <label for="capacidad">Capacidad:</label>
+    <input type="number" id="capacidad" name="capacidad" [(ngModel)]="curso.capacidad" required>
+    <br>
+
+    <label for="estado">Estado:</label>
+    <select id="hora" name="hora" [(ngModel)]="curso.estado" required>
+      <option *ngFor="let estado of estadoOptions" [value]="estado">{{ estado }}</option>
+    </select>
+    <br>
+
+    <button type="submit">Crear Curso</button>
+  </form>
+</div>

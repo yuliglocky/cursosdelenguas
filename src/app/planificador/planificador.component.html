@@ -1,0 +1,38 @@
+<div *ngIf="cursosXProfesores.length > 0">
+  <h2>Listado de Cursos por Profesor</h2>
+  <button (click)="downloadPDF()">Descargar PDF</button>
+  <div id="planificador" class="horario-container">
+    <!-- Encabezado con días -->
+    <div class="encabezado">
+      <div class="placeholder"></div> <!-- Espacio en blanco para la esquina vacía -->
+      <!-- Mostrar días de la semana -->
+      <div class="dias-semana">
+        <div class="dia" *ngFor="let dia of diasSemana">
+          <h4>{{ dia }}</h4>
+        </div>
+      </div>
+    </div>
+    <!-- Iteración por horas -->
+    <div class="horas-container">
+      <div class="hora" *ngFor="let hora of horas">
+        <h3>{{ hora }}</h3>
+        <!-- Iteración por días -->
+        <div class="dias-container">
+          <div class="dia" *ngFor="let dia of diasSemana">
+            <!-- Mostrar cursos correspondientes -->
+            <div class="cursos">
+              <div *ngFor="let curso of getCursosPorHoraYDia(hora, dia)" class="curso">
+                <h5>{{ curso.cursoNombre }}</h5>
+                <p>Profesor: {{ curso.profesorNombre }}</p>
+                <p>Nivel: {{ curso.nivel }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="cursosXProfesores.length === 0">
+  <p>No se encontraron cursos.</p>
+</div>

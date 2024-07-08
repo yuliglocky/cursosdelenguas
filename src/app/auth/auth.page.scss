@@ -1,0 +1,126 @@
+/* Estilos generales */
+.login-container, .login-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: #191b1a; 
+    color: white;
+  /* Cambia el color del texto a negro */
+  }
+  
+  
+  .logo {
+    width: 70px; /* Ajusta el tamaño según sea necesario */
+    height: 70px; /* Ajusta el tamaño según sea necesario */
+    border-radius: 50%; /* Hace que la imagen tenga forma de círculo */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    margin-top: 20px; /* Espacio entre el botón y el logo */
+  }
+  
+  ion-card {
+    width: 100%;
+    max-width: 400px; /* Ajusta el tamaño máximo de la tarjeta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: agrega sombra a la tarjeta */
+  }
+  
+  ion-card-content {
+    padding-top: 40px; /* Para compensar el margen negativo del logo */
+  }
+  
+  .icon {
+    width: 20px; /* Ajusta el tamaño del ícono según sea necesario */
+    height: 20px;
+    margin-right: 8px; /* Espacio entre el ícono y el texto del label */
+    vertical-align: middle; /* Alinea verticalmente el ícono con el texto */
+  }
+  
+  ion-label {
+    display: flex;
+    align-items: center; /* Alinea los íconos y el texto verticalmente */
+  }
+  
+  .rounded-card {
+    border-radius: 15px; /* Ajusta el radio de borde para hacer la tarjeta más circular */
+  }
+  
+  .extra-button {
+    margin-top: 240px; /* Espacio de 40 píxeles debajo del botón de login */
+  }
+  
+  ion-button {
+    --background: #CCD0DF;
+    --background-hover: #CCD0DF;
+    --background-activated: #CCD0DF;
+    --background-focused: #CCD0DF;
+  
+    --color: rgb(0, 0, 0);
+  
+    --border-radius: 20px; /* Bordes más circulares */
+  
+  
+    --box-shadow: 0 2px 6px 0 rgb(0, 0, 0, 0.25);
+  
+    --ripple-color: deeppink;
+  
+    --padding-top: 2px; /* Reduce el padding vertical */
+    --padding-bottom: 2px;
+    --padding-start: 8px; /* Reduce el padding horizontal */
+    --padding-end: 8px;
+  
+    --height: 30px; /* Reduce la altura del botón */
+    --width: auto; /* Permite que el ancho se ajuste al contenido */
+  }
+  ion-content {
+    --ion-background-color: #1d1e1f; /* Cambia el color de fondo según sea necesario */
+  }
+  
+ 
+  .login-title {
+    font-size: 2.5rem; /* Ajusta el tamaño del título */
+    color: #ffffff; /* Cambia el color según sea necesario */
+    transition: transform 0.3s ease-in-out; /* Añade la transición para el zoom */
+  }
+  
+  .login-title:hover {
+    transform: scale(1.1); /* Aplica el zoom al pasar el ratón */
+  }
+  
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-around; /* Ajusta el espacio alrededor de las tarjetas */
+    align-items: center; /* Alinea las tarjetas verticalmente en el centro */
+    height: 100vh; /* Ajusta la altura de la tarjeta al 100% del viewport */
+  }
+  
+  .rounded-card {
+    width: 400px; /* Ancho fijo para cada tarjeta */
+  }
+  
+  .logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-title {
+    font-size: 1.5rem;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }

@@ -1,0 +1,26 @@
+
+
+<ion-content [fullscreen]="true">
+  <app-admin-nav></app-admin-nav>
+  <div *ngIf="cursos.length > 0; else noCursos">
+    <h2>Cursos del Usuario</h2>
+    <div class="row">
+      <div class="col-md-6" *ngFor="let curso of cursos">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h3 class="card-title">{{ curso.cursoNombre }}</h3>
+            <p class="card-text">Profesor: {{ curso.profesorNombre }}</p>
+            <p class="card-text">Estado: {{ curso.status }}</p>
+            <button class="btn btn-success mr-2" (click)="actualizarEstado(curso.id, 'Aprobado')">Marcar como Aprobado</button>
+            <button class="btn btn-danger" (click)="actualizarEstado(curso.id, 'Desaprobado')">Marcar como Desaprobado</button>
+            <!-- Agrega más detalles del curso según tu modelo CursoXProfesor -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noCursos>
+    <p>No hay cursos disponibles para mostrar.</p>
+  </ng-template>
+</ion-content>

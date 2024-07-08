@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page de Cursos</title>
+</head>
+<ion-content>
+  <app-solicitud></app-solicitud>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <main class="card-container">
+    <!-- Ejemplo de tarjeta 1 -->
+    <div class="card">
+      <img src="https://i.pinimg.com/564x/16/27/d3/1627d331d3a319ba6bdea6a0aa4bcf1f.jpg" alt="Curso 1">
+      <div class="card-body">
+        <h3 class="card-title">Curso de Ingles Gratis</h3>
+        <p class="card-text">Tendras la oportunidad de aprender ingles de la mejor manera</p>
+        
+      </div>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <!-- Ejemplo de tarjeta 2 -->
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/56/3f/0b/563f0b714e90f9195c1d63b09f5fb8e1.jpg" alt="Curso 2">
+      <div class="card-body">
+        <h3 class="card-title">Curso de aleman</h3>
+        <p class="card-text">Aleman? Sii podras inscribirte y participar en nuestro examen para poder estar en el curso.</p>
+        
+      </div>
+    </div>
+
+  <app-planificador></app-planificador>
+
+  </main>
 </ion-content>
+</html>

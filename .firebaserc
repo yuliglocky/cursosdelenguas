@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "cursosdelenguas-c08c5": {
+      "hosting": {
+        "app": [
+          "cursosdelenguas-c08c5"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "cursosdelenguas-c08c5"
+  }
+}

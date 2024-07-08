@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>users-course</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-admin-nav></app-admin-nav>
+
+  <div class="card-container">
+    <div *ngFor="let user of users" class="card">
+      <div class="card-body">
+        <h2 class="card-title">{{ user.name }}</h2>
+        <button class="view-button" (click)="viewUserCourses(user.id)">Ver Cursos</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

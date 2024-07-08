@@ -1,0 +1,23 @@
+
+
+<ion-content [fullscreen]="true">
+<app-solicitud></app-solicitud>
+  <div class="container">
+    <div *ngIf="getCursosActivos().length > 0; else noCursos">
+      <h2>Cursos del Usuario</h2>
+      <div class="card-container">
+        <div *ngFor="let curso of getCursosActivos()" class="card">
+          <div class="card-body">
+            <h3 class="card-title">{{ curso.cursoNombre }}</h3>
+            <p class="card-text">Profesor: {{ curso.profesorNombre }}</p>
+            <p class="card-text">Estado: {{ curso.status }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #noCursos>
+      <p>No hay cursos disponibles para mostrar.</p>
+    </ng-template>
+  </div>
+
+</ion-content>
